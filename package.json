@@ -1,0 +1,23 @@
+{
+  "name": "website",
+  "private": true,
+  "main": "support/entry.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --progress",
+    "build:prod": "npm run clean && webpack --env=production",
+    "watch": "npm run clean && webpack-dev-server --content-base static/ --hot --inline --progress",
+    "start": "npm run watch"
+  },
+  "dependencies": {
+    "bower": "^1.8.0"
+  },
+  "devDependencies": {
+    "babili-webpack-plugin": "^0.1.1",
+    "purescript-psa": "^0.5.1",
+    "purs-loader": "^3.0.0",
+    "rimraf": "^2.6.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
